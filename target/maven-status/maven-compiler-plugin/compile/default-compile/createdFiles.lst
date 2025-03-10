@@ -1,0 +1,10 @@
+com\mycompany\cos2208project\main.class
+database\PostgresDb.class
+pkg\Custom\Request.class
+entities\Department.class
+config\Config.class
+pkg\department\departmentRepository\DepartmentRepositoryImpl.class
+pkg\department\departmentRepository\IDepartmentRepository.class
+pkg\department\departmentService\IDepartmentService.class
+com\mycompany\cos2208project\COS2208Project.class
+database\IDatabase.class
