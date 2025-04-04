@@ -1,0 +1,8 @@
+
+CREATE TABLE books (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    qty INT NOT NULL DEFAULT 0,
+    price DECIMAL(10,2) DEFAULT 0 NOT NULL,
+    discount DECIMAL(5,2) DEFAULT 0
+);

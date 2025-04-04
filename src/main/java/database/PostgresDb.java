@@ -13,21 +13,16 @@ import java.sql.SQLException;
  *
  * @author black
  */
-public class PostgresDb implements IDatabase {
+public class PostgresDb{
 
     static Connection connectionInstance = null;
-    Config config;
-    
-    public PostgresDb(Config config){
-        this.config = config;
-    }
+  
 
-    public Connection Connection() {
-        String url = String.format("jdbc:postgresql://localhost:%s/%s",config.getDbPort(),config.getDbName()); 
-        String user = config.getDbUser(); 
-        String password = config.getDbPassword();
-        System.out.println("test");
+    public static Connection getConnection(Config config) {
         if (connectionInstance == null) {
+            String url = String.format("jdbc:postgresql://localhost:%s/%s",config.getDbPort(),config.getDbName()); 
+            String user = config.getDbUser(); 
+            String password = config.getDbPassword();
             try {
 
                 connectionInstance = DriverManager.getConnection(url, user, password);
@@ -42,3 +37,5 @@ public class PostgresDb implements IDatabase {
         return connectionInstance;
     }
 }
+
+

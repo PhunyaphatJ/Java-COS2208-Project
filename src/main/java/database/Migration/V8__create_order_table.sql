@@ -1,0 +1,5 @@
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    member_id INT NULL REFERENCES members(id) ON DELETE SET NULL,
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

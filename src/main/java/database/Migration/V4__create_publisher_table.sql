@@ -1,0 +1,5 @@
+CREATE TABLE publishers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE
+);
+ALTER TABLE books ADD COLUMN publisher_id INT REFERENCES publishers(id) ON DELETE SET NULL;
